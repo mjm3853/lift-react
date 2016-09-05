@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './LoggedLift.css';
 
 class LoggedLift extends Component {
     render() {
         return (
             <div>
-                <p>{this.props.name}</p>
+                <p className="workout">{this.props.name}</p>
             </div>
         );
     }
