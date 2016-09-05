@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LoggedLift from './LoggedLift';
+import LoggedLift from './LoggedLift/LoggedLift';
 
 class LiftLog extends Component {
 
@@ -12,23 +12,21 @@ class LiftLog extends Component {
     }
 
     componentDidMount() {
-        this.horizon('workouts')
-            .watch()
-            .subscribe(
+        this.horizon('workouts').watch().subscribe(
             (result) => {
                 this.setState({ workouts: result })
             },
             (error) => {
                 console.error(error)
             }
-            );
+        );
     }
 
     render() {
 
         var liftNodes = this.state.workouts.map(function (workout) {
             return (
-                <LoggedLift key={workout.id} name={workout.name} />
+                <LoggedLift key={workout.id} name={workout.name} timestamp={workout.timestamp} lifts={workout.lifts} />
             )
 
         })
