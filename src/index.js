@@ -6,7 +6,7 @@ import './index.css';
 var data = [
   { id: 1, name: "First Lift" },
   { id: 2, name: "Second Lift" },
-  { id: 3, name: "Third Lift"}
+  { id: 3, name: "Third Lift" }
 ]
 
 ReactDOM.render(
