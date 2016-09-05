@@ -11,7 +11,7 @@ class App extends Component {
           <h2>Lift App - React</h2>
         </div>
         <AddLift />
-        <LiftLog />
+        <LiftLog data={this.props.data} />
       </div>
     );
   }
