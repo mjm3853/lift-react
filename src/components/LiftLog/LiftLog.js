@@ -35,7 +35,7 @@ class LiftLog extends Component {
 
         return (
             <div>
-                <p>Lift Log Component</p>
+                <h2>Lift Log</h2>
                 {liftNodes}
             </div>
         );

@@ -17,10 +17,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Lift App - React</h2>
+          <h1>Lift App</h1>
         </div>
         <AddLift />
-        <LiftLog data={this.props.data} horizon={horizon}/>
+        <LiftLog horizon={horizon}/>
       </div>
     );
   }
