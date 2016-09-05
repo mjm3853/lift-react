@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class AddLift extends Component {
     render() {
         return (
-            <div className="col-md-4">
-                <h2>Add Lift</h2>
+            <div className="panel panel-default">
+                <div className="panel-heading">
+                    <h2>Add Lift</h2>
+                </div>
             </div>
         );
     }

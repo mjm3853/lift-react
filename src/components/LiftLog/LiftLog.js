@@ -34,12 +34,17 @@ class LiftLog extends Component {
         })
 
         return (
-                <div className="col-md-8">
+            <div className="panel panel-default">
+                <div className="panel-heading">
                     <h2>Lift Log</h2>
+                </div>
+                <div className="panel-body">
                     {liftNodes}
                 </div>
+            </div>
         );
     }
 }
+
 
 export default LiftLog;

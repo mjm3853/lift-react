@@ -20,8 +20,12 @@ class App extends Component {
           <h1>Lift App</h1>
         </div>
         <div className="container">
-          <AddLift />
-          <LiftLog horizon={horizon}/>
+          <div className="col-md-4">
+            <AddLift />
+          </div>
+          <div className="col-md-8">
+            <LiftLog horizon={horizon}/>
+          </div>
         </div>
       </div>
     );
