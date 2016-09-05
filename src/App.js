@@ -19,8 +19,10 @@ class App extends Component {
         <div className="App-header">
           <h1>Lift App</h1>
         </div>
-        <AddLift />
-        <LiftLog horizon={horizon}/>
+        <div className="container">
+          <AddLift />
+          <LiftLog horizon={horizon}/>
+        </div>
       </div>
     );
   }

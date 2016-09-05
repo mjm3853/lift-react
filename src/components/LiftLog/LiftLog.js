@@ -34,10 +34,10 @@ class LiftLog extends Component {
         })
 
         return (
-            <div>
-                <h2>Lift Log</h2>
-                {liftNodes}
-            </div>
+                <div className="col-md-8">
+                    <h2>Lift Log</h2>
+                    {liftNodes}
+                </div>
         );
     }
 }
