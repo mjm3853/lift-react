@@ -20,19 +20,15 @@ class LiftLog extends Component {
             },
             (error) => {
                 console.error(error)
-            },
-            () => {
-                console.log('Results fetched')
-            });
-
+            }
+            );
     }
-
 
     render() {
 
-        var liftNodes = this.props.data.map(function (lift) {
+        var liftNodes = this.state.workouts.map(function (workout) {
             return (
-                <LoggedLift name={lift.name} />
+                <LoggedLift name={workout.name} />
             )
 
         })
