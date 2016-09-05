@@ -14,7 +14,7 @@ class LoggedLift extends Component {
         
         return (
             <div>
-                <p className="workout">{this.props.name}</p>
+                <h3>{this.props.name}</h3>
                 <p>{this.props.timestamp.toString()}</p>
                 {liftGroupNodes}
                 <hr/>

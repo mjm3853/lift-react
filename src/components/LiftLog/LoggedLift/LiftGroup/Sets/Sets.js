@@ -4,8 +4,7 @@ class Sets extends Component {
     render() {
         return (
             <ul>
-                <li>{this.props.reps}</li>
-                <li>{this.props.weight + " " + this.props.weightType}</li>
+                <li>{this.props.reps + " x " + this.props.weight + " " + this.props.weightType}</li>
             </ul>
         );
     }
