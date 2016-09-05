@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class AddLift extends Component {
     render() {
         return (
-            <div>Add Lift Component</div>
+            <div className="AddLift">
+                <p>Add Lift Component</p>
+            </div>
         );
     }
 }
