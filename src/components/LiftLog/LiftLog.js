@@ -6,14 +6,27 @@ class LiftLog extends Component {
     constructor(props) {
         super(props);
         this.horizon = props.horizon;
-        this.state = {}
+        this.state = {
+            workouts: []
+        }
     }
 
     componentDidMount() {
-        this.horizon.connect();
-        var status = this.horizon.status();
-        console.log(status);
+        this.horizon('workouts')
+            .watch()
+            .subscribe(
+            (result) => {
+                this.setState({ workouts: result })
+            },
+            (error) => {
+                console.error(error)
+            },
+            () => {
+                console.log('Results fetched')
+            });
+
     }
+
 
     render() {
 
