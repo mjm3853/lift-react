@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class AddLift extends Component {
+
+    handleSubmit(e) {
+        e.preventDefault();
+        alert("The form doesn't work yet bozo")
+    }
+    
+    
     render() {
         return (
             <div className="panel panel-default">
@@ -8,7 +15,7 @@ class AddLift extends Component {
                     <h2>Add Lift</h2>
                 </div>
                 <div className="panel-body">
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
                             <input className="form-control" type="text" placeholder="Workout Name" />
                         </div>
