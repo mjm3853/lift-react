@@ -6,7 +6,12 @@ class LiftGroup extends Component {
 
         var setNodes = this.props.sets.map(function (set, index) {
             return (
-                <Sets key={index} reps={set.reps} weight={set.weight} weightType={set.weightType} />
+                <Sets
+                    key={index}
+                    reps={set.reps}
+                    weight={set.weight}
+                    weightType={set.weightType}
+                    />
             )
 
         })

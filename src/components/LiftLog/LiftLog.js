@@ -26,7 +26,12 @@ class LiftLog extends Component {
 
         var liftNodes = this.state.workouts.map(function (workout) {
             return (
-                <LoggedLift key={workout.id} name={workout.name} timestamp={workout.timestamp} lifts={workout.lifts} />
+                <LoggedLift
+                    key={workout.id}
+                    name={workout.name}
+                    timestamp={workout.timestamp}
+                    lifts={workout.lifts}
+                    />
             )
 
         })
