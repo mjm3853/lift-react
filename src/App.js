@@ -21,7 +21,7 @@ class App extends Component {
         </div>
         <div className="container">
           <div className="col-md-4">
-            <AddLift />
+            <AddLift horizon={horizon}/>
           </div>
           <div className="col-md-8">
             <LiftLog horizon={horizon}/>

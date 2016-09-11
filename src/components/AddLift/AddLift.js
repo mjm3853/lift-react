@@ -4,12 +4,14 @@ class AddLift extends Component {
 
     constructor(props) {
         super(props);
+        this.horizon = props.horizon;
         this.state = {
             workoutName: '',
             liftName: '',
             reps: '',
-            weight: ''
+            weight: '',
         }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleWorkoutNameChange(e) {
@@ -30,7 +32,25 @@ class AddLift extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        alert("The form doesn't work yet bozo")
+        var workout = {
+            name: this.state.workoutName,
+            timestamp: new Date(),
+            lifts: [{
+                name: this.state.liftName,
+                sets: [{
+                    reps: this.state.reps,
+                    weight: this.state.weight,
+                    weightType: 'Pounds'
+                }]
+            }]
+        }
+        this.horizon('workouts').store(workout);
+        this.setState({
+            workoutName: '',
+            liftName: '',
+            reps: '',
+            weight: '',
+        })
     }
 
     render() {
@@ -47,7 +67,7 @@ class AddLift extends Component {
                                 type="text"
                                 placeholder="Workout Name"
                                 value={this.state.workoutName}
-                                onChange={this.handleWorkoutNameChange.bind(this)}
+                                onChange={this.handleWorkoutNameChange.bind(this) }
                                 />
                         </div>
                         <div className="well well-sm">
@@ -57,7 +77,7 @@ class AddLift extends Component {
                                     type="text"
                                     placeholder="Lift Name"
                                     value={this.state.liftName}
-                                    onChange={this.handleLiftNameChange.bind(this)}
+                                    onChange={this.handleLiftNameChange.bind(this) }
                                     />
                             </div>
                             <div className="well well-sm">
@@ -68,14 +88,14 @@ class AddLift extends Component {
                                         type="text"
                                         placeholder="Reps"
                                         value={this.state.reps}
-                                        onChange={this.handleRepsChange.bind(this)}
+                                        onChange={this.handleRepsChange.bind(this) }
                                         />
                                     <input
                                         className="form-control"
                                         type="text"
                                         placeholder="Weight"
                                         value={this.state.weight}
-                                        onChange={this.handleWeightChange.bind(this)}
+                                        onChange={this.handleWeightChange.bind(this) }
                                         />
                                 </div>
                             </div>
